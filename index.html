@@ -1,15 +1,15 @@
-  <style>
+ <style>
    
     Body{
     background: linear-gradient(300deg, pink,rgba(194, 76, 149, 0.904));    
     }
    
-    Dig1{
+    Dig1 input{
     margin: 100px 1px;
     }
     Dig2{
     margin: 100px 1px;
-    }
+    } 
     Dig3{
     margin: 100px 1px;
     }
@@ -86,21 +86,22 @@
     margin: 100px 1px;
     }
 
-    a{
+    a input{
+    width: 100px;
     display: block;
-    width: 70px;
+    margin: -35px 1330px;
     font-weight: 700;
     background-color: grey;
     color: black;
     border-radius: 10px;
     border: 3px solid black;
-    padding: 15px 30px;
-    padding-left: 25px;
-    margin: -35px 1330px;
+    padding: 12px 30px;
+    padding-left: 13px;
+    margin: -134px 1330px;
     text-decoration: none;
     }
     
-    a:hover{
+    a input:hover{
     background-color: rgba(10, 228, 10, 0.678);
     border: 3px solid rgb(6, 68, 39);
     color: rgb(6, 68, 39);
@@ -123,12 +124,12 @@
     <body>
       
         <exp>Habéis recibido unos tubos con tropecientosmil Lacasitos...en algunos de ellos veréis unas letras (o en muchos XD), con esas letras tenéis que componer una frase, con un mensaje oculto. Ingresad ese mensaje en las casillas de abajo (un carácter por casilla) y obtendréis la siguiente pista!!</exp>
-    <form id="MensajeOculto">
+    
+    <form name="form1" method="post" action="javascript:enviar(this.form1)">  
+    <br></br>
+    <br></br>
 
-        <br></br>
-        <br></br>
-
-     <!--PALABRA 1 ENCONTRAD-->    
+     <!--PALABRA 1 -->    
     <Dig1>
         <input type="text" name="D1" id="E1" placeholder="???" size="1" maxlength="1">
     </Dig1> 
@@ -157,7 +158,7 @@
         <input type="text" name="D9" id="E9" placeholder="???" size="1" maxlength="1">
     </Dig9> 
     
-     <!--PALABRA 2 TESOROS-->
+     <!--PALABRA 2 -->
     <Dig10> 
         <input type="text" name="D10" id="E10" placeholder="???" size="1" maxlength="1">
     </Dig10> 
@@ -180,7 +181,7 @@
         <input type="text" name="D16" id="E16" placeholder="???" size="1" maxlength="1">
     </Dig16> 
 
-     <!--PALABRA 3 POR-->
+     <!--PALABRA 3 -->
     <Dig17>
         <input type="text" name="D17" id="E17" placeholder="???" size="1" maxlength="1">
     </Dig17> 
@@ -191,7 +192,7 @@
         <input type="text" name="D19" id="E19" placeholder="???" size="1" maxlength="1">
     </Dig19> 
 
-     <!--PALABRA 4 AQUI-->
+     <!--PALABRA 4 -->
      <Dig20>
         <input type="text" name="D20" id="E20" placeholder="???" size="1" maxlength="1">
     </Dig20> 
@@ -204,16 +205,77 @@
     <Dig23>
         <input type="text" name="D23" id="E23" placeholder="???" size="1" maxlength="1">
     </Dig23> 
-    </form>
+    <br></fbr>
     
-    <a href="https://sanchitolz.github.io/Proyectitos/Resultado.html">VALIDAR</a>
+    <a>
+        <input type="submit"  value="VALIDAR">
+    </a>
 
+    </form>
+  
+    <!-- <a href="https://sanchitolz.github.io/Proyectitos/Resultado.html">VALIDAR</a>-->
+
+
+
+    
     <script type= "text/javascript">
 
         document.oncontextmenu = function(){return false;}
         
-    </script>
-    <script>
-       const addform = document.getElementById("MensajeOculto");
-    </script>
-    </body>
+        </script>
+
+</body>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+
+     <!-- <form name="form1" method="post" action="javascript:enviar(this.form1)">        
+        Texto a enviar
+        <input type="text" name="textfield">
+        <input type="submit" name="Submit" value="Submit">
+        </form> -->
+       
+        <script>
+        
+        function enviar(formul)
+            {
+            var D1 = formul.D1.value 
+            var D2 = formul.D2.value 
+            var D3 = formul.D3.value 
+            var D4 = formul.D4.value 
+            var D5 = formul.D5.value 
+            var D6 = formul.D6.value 
+            var D7 = formul.D7.value 
+            var D8 = formul.D8.value 
+            var D9 = formul.D9.value 
+            var D10 = formul.D10.value 
+            var D11 = formul.D11.value 
+            var D12 = formul.D12.value 
+            var D13 = formul.D13.value 
+            var D14 = formul.D14.value 
+            var D15 = formul.D15.value 
+            var D16 = formul.D16.value 
+            var D17 = formul.D17.value 
+            var D18 = formul.D18.value 
+            var D19 = formul.D19.value 
+            var D20 = formul.D20.value 
+            var D21 = formul.D21.value 
+            var D22 = formul.D22.value 
+            var D23 = formul.D23.value 
+            
+            var frase = D1 + D2 + D3 + D4 + D5 + D6 + D7 + D8 + D9 + D10 + D11 + D12 + D13 + D14 + D15 + D16 + D17 + D18 + D19 + D20 + D21 + D22 + D23
+            var coord = D1 + D2 + D3 + D4 + D5 + D7 + D8 + D9 + D10 + D11 + D12 + D13 + D14 + D15 + D16 + D18 + D19 + D20 + D21 + D22 + D23
+            
+
+            if (frase == "ENCONTRADTESOROSPORAQUI")
+
+            alert("La frase es correcta...pero tendréis que ingresar ahora otra cosa en las casillas. Dadle una VUELTA al asunto...")
+                  
+            else if (coord == '41º2001.7"N0º2702.3"W')
+
+                   location ="lugar.jfif"//
+            else 
+                    location = "https://sanchitolz.github.io/Proyectitos/Resultado.html"
+            }</script>
